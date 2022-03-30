@@ -22,7 +22,21 @@
         12=>"Diciembre"
       );
 
-      echo '<h2>Mostrando todos los meses</h2>';
+      $numDias = array(
+        "Enero"=>31,
+        "Febrero"=>28,
+        "Marzo"=>31,
+        "Abril"=>30,
+        "Mayo"=>31,
+        "Junio"=>30,
+        "Julio"=>31,
+        "Agosto"=>31,
+        "Septiembre"=>30,
+        "Octubre"=>31,
+        "Noviembre"=>30,
+        "Diciembre"=>31
+      );
+      echo '<div><h2>Mostrando todos los meses</h2>';
       echo '<table><tr><th>Nombre</th></tr>';
 			/*foreach ($meses as $mesnum => $mes)
       {
@@ -33,9 +47,19 @@
       {
           echo '<tr><td>'.$mes.'</td></tr>';
       }
-      echo '</table>';
 
 
+      echo '</table></div>';
+
+      //---------------------------------------------------
+
+      echo '<div><h2>Mostrando todos los meses con sus dias</h2>';
+      echo '<table><tr><th>Nombre</th><th>Numero<br>de Dias</th></tr>';
+
+      foreach ($numDias as $mes => $diasmes)
+          echo '<tr><td>'.$mes.'</td><td>'.$diasmes.'</td></tr>';
+
+      echo '</table></div>';
     ?>
   </body>
 </html>
