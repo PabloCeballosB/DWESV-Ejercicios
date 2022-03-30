@@ -1,0 +1,13 @@
+form{
+  border: 1px solid black;
+  width: 500px;
+  border-radius: 15px;
+}
+
+li{
+  list-style: none;
+}
+
+label{
+  font-size: 20px;
+}
