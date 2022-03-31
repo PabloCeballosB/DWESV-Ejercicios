@@ -11,7 +11,6 @@
         <li>
           <label for="categoria">Categoria</label>
           <select name="categoria">
-            <option></option>
             <option>Navidad</option>
             <option>Semana Ignaciana</option>
             <option>Fiestas Escolares</option>
@@ -41,16 +40,37 @@
       }
 
       function recoger_formulario(){
-          $datos = array(){
+          $datos = array(
             "Categoria"=>$_POST['categoria'],
-            "NombreActividad"=>$_POST['nombreActividad'],
-            "Etapa1"=>$_POST['primaria'],
-            "Etapa2"=>$_POST['eso'],
-            "Etapa3"=>$_POST['bachillerato'],
-            "Etapa4"=>$_POST['cfgm'],
-            "Etapa5"=>$_POST['cfgs'],
-            "ActividadSeccion"=>$_POST['actividad']
+            "NombreActividad"=>$_POST['nombreActividad']/*,
+            "Primaria"=>$_POST['primaria'],
+            "Eso"=>$_POST['eso'],
+            "Bahcillerato"=>$_POST['bachillerato'],
+            "CFGM"=>$_POST['cfgm'],
+            "CFGS"=>$_POST['cfgs'],
+            "ActividadSeccion"=>$_POST['actividad']*/
+          );
+          foreach($datos as $nombre)
+          {
+            if (empty($_POST[strtolower($nombre)]))
+              //$datos[$nombre] = "off";
+              echo 'Hola<br>';
           }
+
+          /*if (empty($_POST['primaria']))
+            $datos["Primaria"] = "NO";
+          else
+            $datos["Primaria"] = "SI";*/
+
+          /*foreach($datos as $nombre => $dato)
+          {
+            if($dato==null)
+            {
+              $datos[$dato] = "off";
+            }
+            // echo 'El dato de '.$nombre.' es '.$dato.'<br>';
+          }*/
+
       }
      ?>
   </body>

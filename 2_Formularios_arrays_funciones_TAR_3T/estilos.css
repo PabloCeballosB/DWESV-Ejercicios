@@ -1,6 +1,11 @@
+body{
+  margin: 50px;
+}
+
 form{
   border: 1px solid black;
   width: 500px;
+  margin: auto;
   border-radius: 15px;
 }
 
