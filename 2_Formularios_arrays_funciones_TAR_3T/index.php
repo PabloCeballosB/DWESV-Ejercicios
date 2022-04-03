@@ -18,7 +18,7 @@
         </li>
         <li>
           <label for="nombreActividad">Nombre de la actividad</label>
-          <input type="text" name="nombreActividad"/>
+          <input type="text" name="nombreActividad" required/>
         </li>
         <li>
           <input type="checkbox" name="primaria" class="etapas">Primaria</input>
@@ -36,41 +36,75 @@
     </form>
     <?php
       if(isset($_POST["submit"]) && !empty($_POST["submit"])) {
+          iniciar();
+      }
+
+      function iniciar(){
         recoger_formulario();
       }
 
       function recoger_formulario(){
           $datos = array(
             "Categoria"=>$_POST['categoria'],
-            "NombreActividad"=>$_POST['nombreActividad']/*,
-            "Primaria"=>$_POST['primaria'],
-            "Eso"=>$_POST['eso'],
-            "Bahcillerato"=>$_POST['bachillerato'],
-            "CFGM"=>$_POST['cfgm'],
-            "CFGS"=>$_POST['cfgs'],
-            "ActividadSeccion"=>$_POST['actividad']*/
+            "NombreActividad"=>$_POST['nombreActividad']
           );
-          foreach($datos as $nombre)
-          {
-            if (empty($_POST[strtolower($nombre)]))
-              //$datos[$nombre] = "off";
-              echo 'Hola<br>';
+
+          if (empty($_POST['primaria'])){
+            $datos["Primaria"] = "NO";
+          }
+          else {
+            $datos["Primaria"] = "SI";
           }
 
-          /*if (empty($_POST['primaria']))
-            $datos["Primaria"] = "NO";
-          else
-            $datos["Primaria"] = "SI";*/
 
-          /*foreach($datos as $nombre => $dato)
-          {
-            if($dato==null)
-            {
-              $datos[$dato] = "off";
-            }
-            // echo 'El dato de '.$nombre.' es '.$dato.'<br>';
-          }*/
+          if(empty($_POST['eso'])){
+              $datos["Eso"] = "NO";
+          }
+          else{
+            $datos["Eso"] = "SI";
+          }
 
+
+          if(empty($_POST['bachillerato'])){
+            $datos["Bachillerato"] = "NO";
+          }
+          else{
+            $datos["Bachillerato"] = "SI";
+          }
+
+
+          if(empty($_POST['cfgm'])){
+            $datos["CFGM"] = "NO";
+          }
+          else{
+            $datos["CFGM"] = "SI";
+          }
+
+
+          if(empty($_POST['cfgs'])){
+            $datos["CFGS"] = "NO";
+          }
+          else{
+            $datos["CFGS"] = "SI";
+          }
+
+
+          if(empty($_POST['actividad'])){
+            $datos["ActividadSeccion"] = "NO";
+          }
+          else{
+            $datos["ActividadSeccion"] = "SI";
+          }
+
+          mostrar_datos($datos);
+      }
+
+      function mostrar_datos($datos){
+        echo "<br><br><br>";
+        foreach($datos as $nombre => $dato)
+        {
+          echo '<p><b>'.$nombre.'</b> ------> '.$dato.'</p>';
+        }
       }
      ?>
   </body>
