@@ -62,10 +62,13 @@
             "NombreActividad"=>$_POST['nombreActividad']
           );
 
-          /*En las etapas debemos crear array dinamico en el que el indice se Genere*/
-          /*Automaticamente con 0,1,2,3..., y se declararia asi:*/
-          //name=Etapa[]
-          //value="ESO"
+          /*En las etapas debemos crear array dinamico en el que el indice se Genere
+          Automaticamente con 0,1,2,3..., y se declararia asi:
+          name=Etapa[]
+          value="ESO"
+          
+          Se mete un array dentro de otro array
+          */
 
 
           //Comprobamos si el check "primaria" está seleccionado o no para introducirlo en el array
