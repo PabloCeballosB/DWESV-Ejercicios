@@ -34,7 +34,6 @@ input[type="submit"]{
   margin-left: 80px;
 }
 
-/*Estilos para los componentes del select*/
 #miSelect{
   margin-left: 10px;
   padding: 5px;
@@ -42,7 +41,6 @@ input[type="submit"]{
   border-radius: 5px;
 }
 
-/*Aplicamos estilos para el campo texto del nombre de actividad*/
 #nombreActividad{
   width: 190px;
   margin-left: 10px;

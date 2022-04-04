@@ -1,0 +1,48 @@
+<!-- Pablo Ceballos Benitez -->
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Formulario</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+  </head>
+  <body>
+    </form>
+    <!--Inicio de crear formulario de datos-->
+    <form method="post" action="acciones.php">
+      <ul>
+        <li>
+          <!--Campo que contiene las categorias-->
+          <label for="categoria">Categoria</label>
+          <select name="categoria" id="miSelect">
+            <option>Navidad</option>
+            <option>Semana Ignaciana</option>
+            <option>Fiestas Escolares</option>
+          </select>
+        </li>
+        <li>
+          <!--Campo en el que se introduce nombre de la actividad-->
+          <label for="nombreActividad">Nombre de la actividad</label>
+          <input type="text" name="nombreActividad" id="nombreActividad" required/>
+        </li>
+        <li id="etapas">
+          <!--Campo en el que tienen los elementos checkbox de las Etapas-->
+          <fieldset>
+            <legend>Etapas</legend>
+            <input type="checkbox" name="primaria" class="etapas" value="Primaria">Primaria</input><br>
+            <input type="checkbox" name="eso" class="etapas">ESO</input><br>
+            <input type="checkbox" name="bachillerato" class="etapas">Bachillerato</input><br>
+            <input type="checkbox" name="cfgm" class="etapas">CFGM</input><br>
+            <input type="checkbox" name="cfgs" class="etapas">CFGS</input>
+          </fieldset>
+        </li>
+        <li id="actividadSeccion">
+          <!--Campo que contiene el checkbox de Actividad de seccion-->
+          <input type="checkbox" name="actividad">Actividad de seccion</input>
+        </li>
+        <li>
+          <!--Boton para enviar los datos del formulario-->
+          <input type="submit" name="submit" value="ENVIAR"/>
+        </li>
+    </form>
+ </body>
+</html>
