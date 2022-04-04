@@ -1,0 +1,23 @@
+*
+{
+	margin: 10px;
+}
+
+
+table, tr, td
+{
+	border-collapse: collapse;
+	text-align: center;
+	padding: 6px;
+	border: solid 2px black;
+}
+
+#numero
+{
+	background-color: lightgray;
+}
+
+hr
+{
+	margin: 20px 20px;
+}
