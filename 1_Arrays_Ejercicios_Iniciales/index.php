@@ -7,6 +7,7 @@
   </head>
   <body>
     <?php
+      //Array que contiene el nombre de los meses
       $meses = array(
         1=>"Enero",
         2=>"Febrero",
@@ -22,6 +23,7 @@
         12=>"Diciembre"
       );
 
+      //Array que contiene el numero de dias que contiene cada mes
       $numDias = array(
         "Enero"=>31,
         "Febrero"=>28,
@@ -38,11 +40,8 @@
       );
       echo '<div><h2>Mostrando todos los meses</h2>';
       echo '<table><tr><th>Nombre</th></tr>';
-			/*foreach ($meses as $mesnum => $mes)
-      {
-        echo '<tr><td>'.$mesnum.'</td><td>'.$mes.'</td></tr>';
-      }*/
 
+      //Version abreviada de foreach que solamente muestra el contenido del array ($mes)
       foreach ($meses as $mes)
       {
           echo '<tr><td>'.$mes.'</td></tr>';
@@ -55,6 +54,7 @@
       echo '<div><h2>Mostrando todos los meses con sus dias</h2>';
       echo '<table><tr><th>Nombre</th><th>Numero<br>de Dias</th></tr>';
 
+      //Version completa del foreach que muestra el nombre del nombre ($mes) y su contenido ($diasmes)
       foreach ($numDias as $mes => $diasmes)
           echo '<tr><td>'.$mes.'</td><td>'.$diasmes.'</td></tr>';
 
