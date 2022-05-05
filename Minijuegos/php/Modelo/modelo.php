@@ -40,7 +40,7 @@
     function modificar(){
       $consulta = "SELECT * FROM minijuegos WHERE idMinijuego=".$_GET['idMini'].";";
       $resultado = $this -> conexion -> query($consulta);
-      $filaMod = $resultado;
+      $filaMod = mysql_fetch_array($resultado);
 
     }
 

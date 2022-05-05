@@ -28,8 +28,7 @@
           require_once('../Controlador/controlador.php');
           $controlador = new Controlador;
           $controlador->modificar();
-          $filaMod = $controlador -> filaMod;
-          $filaMod = $filaMod -> fetch_row();
+          $filaMod = mysql_fetch_array($controlador -> filaMod);
           /*echo "<label for='nombre'>Nombre del Minijuego: </label>
                 <input type='text' name='nombre' value='".$filaMod['nombre']."'><br><br>
                 <label for='icono'>Ruta Icono del Minijuego: </label>
@@ -37,6 +36,7 @@
                 <label for='ruta'>Ruta del Minijuego: </label>
                 <input type='text' name='ruta' value='".$indice['ruta']."'><br><br>
           ";*/
+          echo "<script>alert(".$filaMod.")</script>";
                 echo $filaMod['nombre'];
 
       ?>

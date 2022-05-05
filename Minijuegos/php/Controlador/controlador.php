@@ -71,6 +71,7 @@
       $this->filas = $this -> modelo -> filas;
     }
 
+    /*Funcion que se encarga de mostrar el archivo listaCheckbox.php y listar*/
     function listaCheckbox(){
       require('../Vista/listaCheckbox.php');
       $this -> modelo -> listar();
