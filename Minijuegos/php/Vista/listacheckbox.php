@@ -31,7 +31,7 @@
             }
         //En caso de que no haya ningun minijuego en la base de datos muestra error
         }else{
-            echo "<div class="divError">No Existen valores</div>";
+            echo "<div class='divError'>No Existen valores</div>";
         }
        ?>
        <input type="submit" value="Buscar" name="buscarCheckbox"/>
