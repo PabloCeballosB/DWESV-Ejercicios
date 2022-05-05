@@ -12,6 +12,7 @@
         <li><a href="../Controlador/controlador.php?click=alta">Alta de Minijuegos</a></li>
         <li>Lista de Minijuegos</li>
         <li><a href="../Controlador/controlador.php?click=listaSelect">Lista Select</a></li>
+        <li><a href="../Controlador/controlador.php?click=listaCheckbox">Lista Checkbox</a></li>
       </ul>
     </div>
     <table>

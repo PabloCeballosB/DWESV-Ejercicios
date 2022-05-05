@@ -71,6 +71,14 @@
       $this->filas = $this -> modelo -> filas;
     }
 
+    function listaCheckbox(){
+      require('../Vista/listaCheckbox.php');
+      $this -> modelo -> listar();
+      $this->filas = $this -> modelo -> filas;
+    }
+
+
+
   }
 
 
@@ -92,6 +100,9 @@
             break;
         case 'listaSelect':
             $controlador -> listaSelect();
+            break;
+        case 'listaCheckbox':
+            $controlador -> listaCheckbox();
             break;
         default:
             echo "<h1>Pagina no Encontrada</h1>";

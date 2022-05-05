@@ -9,7 +9,7 @@ ul li{
   padding: 5px 20px;
   font-size: 20px;
   font-weight: bold;
-  margin: 0px 100px;
+  margin: 0px 40px;
   background-color: blue;
   border-radius: 10px;
   border: 2px solid white;
@@ -166,4 +166,27 @@ table tr td{
 #miSelect input{
   padding: 5px;
   font-size: 20px;
+}
+
+#formularioCheckbox{
+  width: 200px;
+  margin: 100px 0px 0px 300px;
+  padding: 20px;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 15px;
+
+}
+
+#formularioCheckbox input[type="submit"]{
+  padding: 10px 40px;
+  font-size: 20px;
+  margin: 20px 0px 0px 15px;
+
+}
+
+#tablaCheckbox{
+  float: right;
+  margin-right: 200px;
+  margin-top: -200px;
 }
